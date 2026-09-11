@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KLE Lab — Technology, Innovation, Leadership</title>
+<meta name="description" content="KLE Lab — Technology, Innovation, Leadership.">
+<link rel="canonical" href="https://klelab.com/">
+<link rel="icon" href="klelab_logo.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="KLE Lab — Technology, Innovation, Leadership">
+<meta property="og:description" content="KLE Lab — Technology, Innovation, Leadership.">
+<meta property="og:url" content="https://klelab.com/">
+<meta property="og:image" content="https://klelab.com/klelab_logo.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="KLE Lab — Technology, Innovation, Leadership">
+<meta name="twitter:description" content="KLE Lab — Technology, Innovation, Leadership.">
+<meta name="twitter:image" content="https://klelab.com/klelab_logo.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KLE Lab",
+  "url": "https://klelab.com/",
+  "logo": "https://klelab.com/klelab_logo.png"
+}
+</script>
+</head>
+<body>
+
+  <div class="hero">
+    <a class="site-logo" href="index.html" aria-label="KLE Lab home">
+      <img src="klelab_logo.png" alt="KLE Lab">
+    </a>
+    <h1>Technology &nbsp; Innovation &nbsp; Leadership</h1>
+  </div>
+
+  <div class="contact">
+    <h2>Contact Us</h2>
+
+    <form id="contact-form" action="contact.php" method="POST">
+      <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_ts" id="form-ts">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" id="submit-btn">Send</button>
+
+      <p id="form-status"></p>
+    </form>
+  </div>
+
+  <p class="footer">&copy; <span id="year"></span> KLE Lab. All rights reserved.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* KLE Lab — simple one-page site */
+
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  color: #222;
+  background: #000;
+}
+
+/* Top section: logo image as background, three words centered */
+.hero {
+  position: relative;
+  height: 75vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("tech_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.site-logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: block;
+  line-height: 0;
+  z-index: 1;
+}
+
+.site-logo img {
+  display: block;
+  width: 168px;
+  height: auto;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 3.0em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .site-logo {
+    top: 16px;
+    left: 16px;
+  }
+
+  .site-logo img {
+    width: 132px;
+  }
+}
+
+/* Contact section */
+.contact {
+  box-sizing: border-box;
+  max-width: none;
+  margin: 0;
+  padding: 72px 20px 84px;
+  background: #000;
+  color: #fff;
+}
+
+.contact h2 {
+  max-width: 500px;
+  margin: 0 auto 24px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 0.9em;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  box-sizing: border-box;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 1em;
+  color: #fff;
+  background: #000;
+  border: 1px solid #fff;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.contact button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1em;
+  font-family: inherit;
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #d9d9d9;
+}
+
+.contact button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#form-status {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.hp-field {
+  display: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: #aaa;
+  background: #000;
+  padding: 20px 0 40px;
+}

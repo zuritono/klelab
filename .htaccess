@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------
+# KLE Lab (klelab.com) — Apache/LiteSpeed config for Hostinger
+# ---------------------------------------------------------------------
+
+# Force HTTPS (requires SSL to be issued/active for the domain in hPanel)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Don't let visitors browse folder contents
+Options -Indexes
+
+# Block direct access to dotfiles (.htaccess, .env, .git, etc.)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Block direct access to the SMTP credentials file used by contact.php
+<Files "smtp-config.php">
+  Require all denied
+</Files>
+
+# Security response headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'self'"
+
+  # Only uncomment once you've confirmed HTTPS/SSL is active for klelab.com —
+  # this tells browsers to ALWAYS use HTTPS for this domain from now on.
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
