@@ -153,7 +153,7 @@ if ($link_count > $MAX_LINKS) {
 
 // Strip anything that could be used for header injection (newlines) in
 // fields that end up influencing headers.
-$safe_name  = str_replace(["\r", "\n"], '', $name);
+$safe_name  = $name;
 $safe_email = str_replace(["\r", "\n"], '', $email);
 
 $subject = "New message from $SITE_NAME";
