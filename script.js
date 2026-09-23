@@ -26,8 +26,9 @@ form.addEventListener("submit", function (event) {
       return response.json();
     })
     .then(function (result) {
+      console.log("form result", result);
       statusText.textContent = result.message;
-      if (result.success) {
+      if (!result.success) {
         form.reset();
       }
     })
